@@ -4,6 +4,7 @@ import com.workintech.s17d2.dto.DeveloperResponse;
 import com.workintech.s17d2.model.Developer;
 import com.workintech.s17d2.model.DeveloperFactory;
 import com.workintech.s17d2.model.Experience;
+import com.workintech.s17d2.model.JuniorDeveloper;
 import com.workintech.s17d2.tax.DeveloperTax;
 import com.workintech.s17d2.tax.Taxable;
 import jakarta.annotation.PostConstruct;
@@ -34,7 +35,7 @@ public class DeveloperController {
     @PostConstruct
     public void init() {
         this.developers = new HashMap<>();
-        this.developers.put(1, new Developer(1, "Cem",1000d, Experience.JUNIOR));
+        this.developers.put(1, new JuniorDeveloper(1, "Cem",1000d));
     }
 
     @PostMapping
